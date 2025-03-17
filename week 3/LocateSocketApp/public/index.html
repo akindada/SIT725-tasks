@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Web Application</title>
+  <!-- Import Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-wrapper teal">
+      <a href="#" class="brand-logo center">Locate Socket App</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h3 class="center-align">Welcome to Socket App for EV Drivers </h3>
+    <p class="flow-text">
+      This is a demo page using Materialize CSS. Customize this template to suit your project needs.
+    </p>
+    <!-- Additional content can go here -->
+    <div id="result" class="card-panel teal lighten-4">Server response will appear here</div>
+  </div>
+
+  <!-- Import Materialize JS and dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Client-side JavaScript: Simple AJAX call to our backend -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('/api/hello')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('result').innerText = data;
+        })
+        .catch(err => console.error('Error fetching data:', err));
+    });
+  </script>
+</body>
+</html>
