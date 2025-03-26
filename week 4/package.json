@@ -1,0 +1,30 @@
+{
+  "name": "sit725-2021-t2-prac3",
+  "version": "1.0.0",
+  "description": "sit 725 week 4 prac",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akindada/SIT725-tasks.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+  "author": "Tolu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akindada/SIT725-tasks/issues"
+  },
+  "homepage": "https://github.com/akindada/SIT725-tasks#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
