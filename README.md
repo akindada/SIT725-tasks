@@ -1,6 +1,6 @@
-# SIT725 - Prac 3 Project
+# SIT725 - Weekly workshop overview
 
-## Project Overview
+## Week 3 overview
 
 This is a demo application for the SIT 725 Week 3 practical assignment. The project showcases various components of Materialize CSS and demonstrates dynamic card generation, modal form submission, 
 and interaction with the user through alerts and forms. 
@@ -39,6 +39,16 @@ and interaction with the user through alerts and forms.
 4. **Modal Creation**: Added a modal that appears when the "Click Me" button is pressed, containing a form for the user to fill out.
 5. **JavaScript for Form Handling**: Created JavaScript functions to handle form submission, including displaying an alert and printing form data to the console.
 6. **Added Responsive Features**: Ensured that the layout is responsive using Materialize's grid system and Flexbox for the form fields.
+
+## Week 4 - Backend Server and Database Integration
+
+In Week 4, we focused on integrating a backend server and setting up a database for our project. The frontend code remains the same as the previous weeks, but we now have backend support.
+
+### Key Changes:
+- Created a `Week-4` folder to store all the backend and database-related code.
+- Introduced server-side integration using Node.js and Express.
+- Set up a database (e.g., MongoDB or another choice).
+- Updated the project to connect the frontend with the backend.
 
 ## How to Run the Project
 
