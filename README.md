@@ -49,3 +49,4 @@ and interaction with the user through alerts and forms.
 ### Steps:
 1. Clone this repository to your local machine:
    ```bash
+https://github.com/akindada/SIT725-tasks.git
