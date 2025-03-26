@@ -47,6 +47,4 @@ and interaction with the user through alerts and forms.
 - **Local Server (Optional)**: If you want to run the project locally on a server, you can use an IDE like Visual Studio Code with Live Server extension or any local server.
 
 ### Steps:
-1. Clone this repository to your local machine:
-   ```bash
-https://github.com/akindada/SIT725-tasks.git
+1. Clone this repository to your local machine: https://github.com/akindada/SIT725-tasks.git
