@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/akindada/SIT725-tasks#readme",
   "dependencies": {
-    "express": "^4.21.2"
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.0"
   }
 }

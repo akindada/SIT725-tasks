@@ -62,20 +62,33 @@ $(document).ready(function() {
     event.preventDefault(); // Prevent form from refreshing the page
 
     // Collect form data
-    const firstName = $('#first-name').val();
-    const lastName = $('#last-name').val();
-    const email = $('#email').val();
+    const formData = {
+      firstName: $('#first-name').val(),
+      lastName: $('#last-name').val(),
+      email: $('#email').val()
+    };
 
     // Log form data to the console (for debugging)
-    console.log("Form Submitted!");
-    console.log("First Name:", firstName);
-    console.log("Last Name:", lastName);
-    console.log("Email:", email);
+    console.log("Form Submitted!", formData);
 
-    // Show the alert with the entered information (optional: you can process or send this data)
-    alert(`Thank you! Your form has been submitted successfully`);
+    // Send the form data to the backend using AJAX
+    $.ajax({
+      url: '/api/submit-form',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(formData),
+      success: function(response) {
+        console.log("Data Saved:", response);
+        M.toast({ html: 'Form submitted successfully!', classes: 'green' });
 
-    // Close the modal after form submission
-    $('#modal1').modal('close');
+        // Close modal & reset form
+        $('#modal1').modal('close');
+        $('#form')[0].reset();
+      },
+      error: function(error) {
+        console.error("Error:", error);
+        M.toast({ html: 'Error submitting form', classes: 'red' });
+      }
+    });
   });
 });
