@@ -41,16 +41,38 @@ and interaction with the user through alerts and forms.
 6. **Added Responsive Features**: Ensured that the layout is responsive using Materialize's grid system and Flexbox for the form fields.
 
 ## Week 4 - Backend Server and Database Integration
-
-In Week 4, we focused on integrating a backend server and setting up a database for our project. The frontend code remains the same as the previous weeks, but we now have backend support.
+### Overview
+In Week 4, we focused on integrating a backend server and setting up a database for our project. The frontend code remains the same as the previous weeks, but we now have backend support with MongoDB integration.
 
 ### Key Changes:
-- Created a `Week-4` folder to store all the backend and database-related code.
+- Created a Week-4 folder to store all the backend and database-related code.
 - Introduced server-side integration using Node.js and Express.
-- Set up a database (e.g., MongoDB or another choice).
-- Updated the project to connect the frontend with the backend.
+- Set up a MongoDB database (via MongoDB Atlas) for storing form data.
+- Integrated Mongoose for MongoDB interaction, allowing us to store and retrieve form submissions from the database.
+- Updated the project to connect the frontend with the backend, enabling data submission via a form and storing it in the  MongoDB database.
+- The backend exposes API endpoints to:
+- Fetch project data (/api/projects)
+- Submit form data (/api/submit-form)
+- Ensured CORS support for frontend-backend communication.
+
+## Backend and Database Setup:
+### Backend Server:
+We created a Node.js server using Express that handles incoming requests, connects to the database, and returns responses to the frontend.
+
+### Database:
+- MongoDB Atlas was used to host our MongoDB database.
+- Mongoose was used to define the schema for the data and handle interactions with MongoDB.
+- Form submissions are saved into the database under the formdatas collection.
+
+### API Endpoints:
+- GET /api/projects: Returns dummy project data for the frontend.
+- POST /api/submit-form: Saves form data to the MongoDB database (first name, last name, and email).
 
 ## How to Run the Project
+- run app using "node server.js"
+- Ensure that MongoDB Compass or any MongoDB client is connected to database.
+- Open the application using "http://localhost:3000/", submit the "CLICK ME" form, and check MongoDB Compass to see if the data is saved.
+- The form data should appear under the formdatas collection in the database.
 
 ### Prerequisites:
 - **A modern browser** (Google Chrome, Firefox, etc.)
