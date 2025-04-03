@@ -74,6 +74,28 @@ We created a Node.js server using Express that handles incoming requests, connec
 - Open the application using "http://localhost:3000/", submit the "CLICK ME" form, and check MongoDB Compass to see if the data is saved.
 - The form data should appear under the formdatas collection in the database.
 
+## 5.2C (MVC-Structured Node.js App) 
+This project is a Node.js and Express application following the MVC pattern, connected to MongoDB Atlas for handling form submissions via a REST API.
+
+### Setting Up MVC Structure
+* Restructure Files: Organize project into models/, controllers/, routes/, and services/.
+* Define the Model: Create a Mongoose schema in models/formModel.js.
+* Create the Controller: Implement form handling logic in controllers/formController.js.
+* Set Up Routes: Define API endpoints in routes/formRoute.js and link them to the controller.
+* Implement Services (Optional): Add database interaction logic in services/formService.js.
+* Update server.js: Import routes and start the Express server on port 8000.
+
+### Testing the API
+* Start the Server: Run
+* Use Postman to Test Endpoints:
+* POST /api/submit-form → Submit a form
+* GET /api/forms → Fetch all forms
+* GET /api/forms/:id → Fetch a single form
+* PUT /api/forms/:id → Update a form
+* DELETE /api/forms/:id → Delete a form
+
+## Note: Verify in MongoDB Compass: Ensure submitted data appears in your MongoDB Atlas database.
+
 ### Prerequisites:
 - **A modern browser** (Google Chrome, Firefox, etc.)
 - **Local Server (Optional)**: If you want to run the project locally on a server, you can use an IDE like Visual Studio Code with Live Server extension or any local server.
