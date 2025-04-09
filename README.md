@@ -96,6 +96,37 @@ This project is a Node.js and Express application following the MVC pattern, con
 
 ## Note: Verify in MongoDB Compass: Ensure submitted data appears in your MongoDB Atlas database.
 
+# Week 6 - API Testing with Mocha, Chai, and Request
+
+## Overview
+
+In this week's practical, we focused on implementing **unit tests** for our Express.js API using testing tools like **Mocha**, **Chai**, and **Request**. The endpoint `/addTwoNumbers/:firstNumber/:secondNumber` was used to demonstrate API functionality and test coverage.
+
+We Implemented a new API route:
+This route returns the sum of two numbers and responds with:
+- `statusCode: 200` if inputs are valid numbers
+- `statusCode: 400` if inputs are invalid (e.g., strings)
+
+- Created automated tests using:
+- `mocha` – testing framework
+- `chai` – assertion library
+- `request` – for making HTTP requests during tests
+
+How to Run Tests
+
+# Update package.json with the test scripts:
+"scripts": {
+  "start": "node server.js",
+  "test": "mocha --reporter spec"}
+
+#  Start the Server
+Make sure the server is running on port `8000`:
+```bash
+node server.js
+
+# Run the Test Suite
+npm test
+
 ### Prerequisites:
 - **A modern browser** (Google Chrome, Firefox, etc.)
 - **Local Server (Optional)**: If you want to run the project locally on a server, you can use an IDE like Visual Studio Code with Live Server extension or any local server.
